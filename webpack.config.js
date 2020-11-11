@@ -37,6 +37,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "React Base Template",
       template: path.resolve(__dirname, "./src/index.html"),
+      favicon: "./src/favicon.ico",
     }),
   ],
 };
