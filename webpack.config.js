@@ -1,6 +1,6 @@
-const path = require("path");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path = require("path");
 
 module.exports = {
   entry: "./src/index.js",
@@ -28,7 +28,7 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    port: 3000
+    port: 3002
   },
   plugins: [
     new MiniCssExtractPlugin({

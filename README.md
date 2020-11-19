@@ -11,7 +11,7 @@ Base template with initial configuration for React Web Development.
 
     ```sh
     $ npm install
-    $ npm run start
+    $ npm run dev
     ```
 
  - Compile project
