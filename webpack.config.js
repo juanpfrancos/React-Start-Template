@@ -1,43 +1,29 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const path = require("path");
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: "./src/index.js",
-  mode: "development",
-  output: {
-    path: path.resolve(__dirname, "public"),
-    filename: "bundle.js",
-    publicPath: '/',
-  },
-  module: {
-    rules: [
-      {
-        test: /\.(js|jsx)$/,
-        use: "babel-loader",
-        exclude: /node_modules/,
-      },
-      {
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
-      },
+    entry: {
+        main: "./src/index.js",
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: "React Base Template",
+            template: "./src/index.html",
+            favicon: "./src/favicon.ico",
+        })
     ],
-  },
-  resolve: {
-    extensions: ["*", ".js", ".jsx"],
-  },
-  devServer: {
-    historyApiFallback: true,
-    port: 3002
-  },
-  plugins: [
-    new MiniCssExtractPlugin({
-      filename: "./styles/[name].css",
-    }),
-    new HtmlWebpackPlugin({
-      title: "React Base Template",
-      template: path.resolve(__dirname, "./src/index.html"),
-      favicon: "./src/favicon.ico",
-    }),
-  ],
-};
+    module: {
+        rules: [
+            {
+                test: /\.(js|jsx)$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env', '@babel/preset-react']
+                    }
+                },
+            },
+        ]
+    },
+
+}
