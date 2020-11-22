@@ -20,3 +20,15 @@ Base template with initial configuration for React Web Development.
     $ npm run build
     ```
 # Enjoy now!
+
+# Features
+* Webpack 5
+* Hot reload server
+* React Router
+* Redux
+* File loader
+* JS And JSX
+* CSS and SASS
+* Eslint and Prettier
+* Development and production Webpack Config 
+* Minify
