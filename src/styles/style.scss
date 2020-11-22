@@ -3,9 +3,14 @@ body {
     text-align: center;
 }
 h1{
-    font-weight: bold;
+    border: 3px solid black;
     color: skyblue;
+    font-weight: bold;
     font-family: 'Lobster', cursive;
     font-size: 4em;
-    text-shadow: 4px 4px 9px rgba(0, 0, 0, 0.94);
+    text-shadow: 4px 4px 9px rgba(167, 167, 167, 0.555);
+}
+a:link, a:visited, a:active {
+    text-decoration:none;
+    color: white;
 }
