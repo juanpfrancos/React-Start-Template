@@ -34,5 +34,6 @@ module.exports = merge(config, {
   },
   devServer: {
     open: true,
+    historyApiFallback: true,
   },
 });
